@@ -1,0 +1,108 @@
+.post {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  &__header {
+    display: flex;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    margin-left: 10px;
+    p {
+      font-size: 12px;
+      color: gray;
+    }
+    h2 {
+      font-size: 15px;
+      // font-weight: 600;
+      // margin-bottom: 5px;
+    }
+  }
+
+  &__body {
+    overflow-wrap: anywhere;
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-evenly;
+  }
+}
+
+// const index = () => {
+//   const [posts, setPosts] = useState([]);
+//   const [input, setInput] = useState("");
+//   useEffect(() => {
+//     db.collection("posts").onSnapshot((snapshot) =>
+//       setPosts(
+//         snapshot.docs?.map((doc) => ({
+//           id: doc.id,
+//           data: doc.data(),
+//         }))
+//       )
+//     );
+//   }, []);
+
+//   const sendPost = (e) => {
+//     e.preventDefault();
+//     db.collection("posts").add({
+//       name: "John Depp",
+//       description: "This is a test",
+//       message: input,
+//       photoUrl: "https://picsum.photos/id/870/25/25?grayscale&blur=2",
+//       timeStamp: firebase.firestore.FieldValue.serverTimestamp(),
+//     });
+//   };
+//   return (
+//     <>
+//       <div className="feed">
+//         <div className="feed__inputContainer">
+//           <div className="feed__input">
+//             <CreateIcon />
+//             <form>
+//               <input
+//                 value={input}
+//                 onChange={(e) => setInput(e.target.value)}
+//                 type="text"
+//               />
+//               <button onClick={sendPost} type="submit">
+//                 Send
+//               </button>
+//             </form>
+//           </div>
+
+//           <div className="feed__inputOptions">
+//             <InputOption Icon={ImageIcon} title="Photo" color="#70b5f9" />
+//             <InputOption
+//               Icon={SubscribtonsIcon}
+//               title="Video"
+//               color="#e7a33e"
+//             />
+//             <InputOption Icon={EventNoteIcon} title="Event" color="#c0cbcd" />
+//             <InputOption
+//               Icon={CalendarViewDayIcon}
+//               title="Write article"
+//               color="#7fc15e"
+//             />
+//           </div>
+//         </div>
+
+//         {posts?.map(
+//           ({ id, data: { name, description, message, photoUrl } }) => (
+//             <Post
+//               key={id}
+//               name={name}
+//               description={description}
+//               message={message}
+//               photoUrl={photoUrl}
+//             />
+//           )
+//         )}
+//       </div>
+//     </>
+//   );
+// };
+
+// export default index;
