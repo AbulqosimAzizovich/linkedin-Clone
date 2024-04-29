@@ -17,6 +17,7 @@
   &__icon {
     border-radius: 50%;
     object-fit: contain;
-    height: 25px;
+    height: 25px !important;
+    width: 25px !important;
   }
 }

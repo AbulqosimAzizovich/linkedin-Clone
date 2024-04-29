@@ -1,0 +1,51 @@
+.widgets {
+  position: sticky;
+  top: 80px;
+  flex: 0.2;
+  background-color: white;
+  border-radius: 4px;
+  border: 1px solid lightgray;
+  height: fit-content;
+  padding-bottom: 10px;
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+
+    h2 {
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  &__article {
+    display: flex;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: whitesmoke;
+    }
+  }
+
+  &__articleLeft {
+    color: #0177b7;
+    margin-right: 5px;
+
+    .MuiSvgIcon-root {
+      font-size: 15px;
+    }
+  }
+
+  &__articleRight {
+    h4 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+      color: gray;
+    }
+  }
+}
